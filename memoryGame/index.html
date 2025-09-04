@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="memory-game.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Find the Doppelganger</title>
+</head>
+
+<body>
+    <div class="container">
+        <audio id="background-music" autoplay loop>
+            <source src="sound/kahoot.mp3" type="audio/mp3">
+        </audio>
+        <!-- Main Menu Section -->
+        <section id="main-menu">
+            <div class="main-menu">
+                <div class="main-menu-title">
+                    <h1>Find the doppElgangEr</h1>
+                </div>
+                <div class="main-menu-buttons">
+                    <button class="main-menu-button" id="playButton">PLAY</button>
+                    <button class="main-menu-button" id="mmSettingsButton">SETTINGS</button>
+                </div>
+            </div>
+        </section>
+        <!-- Game Section -->
+        <section id="game" class="hidden">
+            <div class="game">
+                <div class="game-container" id="game-container">
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/Birthday Cake Emoji.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/Cheese Burger Emoji.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/Cooking Egg Emoji.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/Dango Emoji.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/Donut Emoji.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/French Fries Emoji.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/Poultry Leg Emoji.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/Slice of Pizza Emoji.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/Sushi Emoji.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/Taco Emoji.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/Birthday Cake Emoji.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/Cheese Burger Emoji.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/Cooking Egg Emoji.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/Dango Emoji.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/Donut Emoji.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/French Fries Emoji.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/Poultry Leg Emoji.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/Slice of Pizza Emoji.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/Sushi Emoji.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front"></div>
+                        <div class="back">
+                            <img src="img/Taco Emoji.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <div class="button-container-title">
+                        <h2>Find the doppElgangEr</h2>
+                    </div>
+                    <div class="button-container-buttons">
+                        <button id="refresh" class="refresh-btn">REFRESH
+                            <i class='bx bx-refresh bx-rotate-90'></i>
+                        </button>
+                        <button class="play-button" id="pSettingsButton">SETTINGS</button>
+                        <button class="play-button" id="pMainMenuButton">MAIN MENU</button>
+                        <label for="moves">Moves:</label>
+                        <p id="moves">0</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Ssettings Section -->
+        <section id="settings" class="hidden">
+            <div class="settings">
+                <div class="settings-title">
+                    <h2>SETTINGS</h2>
+                </div>
+                <div class="settings-box">
+                    <div class="sound-settings">
+                        <div class="sound-title">
+                            <h4>SOUND</h4>
+                        </div>
+                        <div class="sound-opt">
+                            <input id="sound" name="sound" type="range" min="0" max="100" step="1" value="100">
+                            <label for="sound">100</label>
+                        </div>
+                    </div>
+                    <div class="display-settings">
+                        <div class="display-title">
+                            <h4>FULLSCREEN</h4>
+                        </div>
+                        <div class="display-opt">
+                            <input type="checkbox" name="fullscreen" id="fullscreen">
+                        </div>
+                    </div>
+                </div>
+                <div class="settings-buttons">
+                    <button class="settings-button" id="sReturn">RETURN</button>
+                </div>
+            </div>
+        </section>
+        <!-- win section -->
+        <div class="hidden" id="win-screen">
+            <div class="winner">
+                <h5>congratulation</h5>
+                <label for="result">Total Move:</label>
+                <p id="result">0</p>
+                <input id="score-name" type="text" maxlength="10" placeholder="Enter your name">
+                <button id="score-name-button" type="submit">save my score</button>
+                <button id="wsMainMenu">main menu</button>
+            </div>
+            <div class="scoreboard">
+                <div class="score-title">
+                    <h5>scoreboard</h5>
+                </div>
+                <div class="score-container">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

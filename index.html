@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" class="light scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarik Eren Kurt</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+</head>
+
+<body>
+    <div class="theme-toggle fixed top-4 right-4 z-50">
+        <button id="themeBtn" class="p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg">
+            <i data-feather="moon" class="dark:hidden"></i>
+            <i data-feather="sun" class="hidden dark:block"></i>
+        </button>
+    </div>
+
+    <nav class="fixed w-full z-40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="text-xl font-bold text-gray-800 dark:text-white">Tarik Eren Kurt</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home"
+                        class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Home</a>
+                    <a href="#about"
+                        class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">About</a>
+                    <a href="#projects"
+                        class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Projects</a>
+                    <a href="#contact"
+                        class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none" id="mobileMenuBtn">
+                    <i data-feather="menu" class="text-gray-800 dark:text-white"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div
+        class="mobile-menu hidden fixed inset-0 z-30 bg-white dark:bg-gray-900 flex flex-col items-center justify-center">
+        <button class="absolute top-4 right-4 p-2" id="closeMenuBtn">
+            <i data-feather="x" class="text-gray-800 dark:text-white"></i>
+        </button>
+        <div class="flex flex-col space-y-8 text-center">
+            <a href="#home" class="text-2xl font-medium text-gray-800 dark:text-white">Home</a>
+            <a href="#about" class="text-2xl font-medium text-gray-800 dark:text-white">About</a>
+            <a href="#projects" class="text-2xl font-medium text-gray-800 dark:text-white">Projects</a>
+            <a href="#contact" class="text-2xl font-medium text-gray-800 dark:text-white">Contact</a>
+        </div>
+    </div>
+
+    <main>
+        <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+            <div
+                class="absolute inset-0 bg-gradient-to-br from-white via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 z-0">
+            </div>
+            <div class="max-w-6xl mx-auto px-4 py-20 z-10 text-center">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-gray-800 dark:text-white" data-aos="fade-up">
+                    Hi, I'm <span class="text-blue-600 dark:text-blue-400">Eren</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-medium mb-8 text-gray-600 dark:text-gray-300" data-aos="fade-up"
+                    data-aos-delay="100">
+                    Software Developer Student
+                </h2>
+                <div class="flex justify-center space-x-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#projects"
+                        class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        View My Work
+                    </a>
+                    <a href="#contact"
+                        class="px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                        Contact Me
+                    </a>
+                </div>
+                <div class="mt-16" data-aos="fade-up" data-aos-delay="300">
+                    <div class="inline-block animate-bounce">
+                        <i data-feather="chevron-down" class="text-gray-600 dark:text-gray-400 w-8 h-8"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-gray-50 dark:bg-gray-800">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white" data-aos="fade-up">About
+                    Me</h2>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="w-full md:w-1/3" data-aos="fade-right">
+                        <div class="relative">
+                            <div
+                                class="w-64 h-64 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-full overflow-hidden shadow-xl">
+                                <img src="img/TarikPhoto.jpg" alt="Profile" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/3" data-aos="fade-left" data-aos-delay="100">
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">Who I Am</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">
+                            I'm a passionate Software Developer student. I love
+                            developing game, learning new things about technology and games.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="flex items-center">
+                                <i data-feather="code" class="w-5 h-5 mr-2 text-blue-600 dark:text-blue-400"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Basic Front-end</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-feather="codepen" class="w-5 h-5 mr-2 text-blue-600 dark:text-blue-400"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Game Development</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm text-gray-700 dark:text-gray-300">JavaScript</span>
+                            <span
+                                class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm text-gray-700 dark:text-gray-300">C#</span>
+                            <span
+                                class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm text-gray-700 dark:text-gray-300">PHP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 bg-white dark:bg-gray-900">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white" data-aos="fade-up">My
+                    Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- 1st project card starts -->
+                    <div class="project-card bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-48 overflow-hidden">
+                            <img src="img/calculator.png" alt="Project 1" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Unit Converter
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">My first ever project after starting to
+                                this school.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="px-2 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-xs text-blue-800 dark:text-blue-200">HTML</span>
+                                <span
+                                    class="px-2 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-xs text-blue-800 dark:text-blue-200">CSS</span>
+                                <span
+                                    class="px-2 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-xs text-blue-800 dark:text-blue-200">JavaScript</span>
+                            </div>
+                            <a href="unitConverter/eenhedenomrekenen.html" target="_blank"
+                                class="text-blue-600 dark:text-blue-400 hover:underline flex items-center">
+                                View Project <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 1st project card ends -->
+                    <!-- 2nd project card starts -->
+                    <div class="project-card bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-48 overflow-hidden">
+                            <img src="img/memory-game.png" alt="Project 2" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Memory Game
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">First webgame ever made by me.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="px-2 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-xs text-blue-800 dark:text-blue-200">HTML</span>
+                                <span
+                                    class="px-2 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-xs text-blue-800 dark:text-blue-200">CSS</span>
+                                <span
+                                    class="px-2 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-xs text-blue-800 dark:text-blue-200">JavaScript</span>
+                            </div>
+                            <a href="memoryGame/index.html" target="_blank"
+                                class="text-blue-600 dark:text-blue-400 hover:underline flex items-center">
+                                View Project <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 2nd project card ends -->
+                    <!-- 3rd project card starts -->
+                    <div class="project-card bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-48 overflow-hidden">
+                            <img src="img/rock-paper-scissors.png" alt="Project 3" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Rock Paper Scissors
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">A webgame with cool animations and
+                                win-lose-tie system</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="px-2 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-xs text-blue-800 dark:text-blue-200">HTML</span>
+                                <span
+                                    class="px-2 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-xs text-blue-800 dark:text-blue-200">CSS</span>
+                                <span
+                                    class="px-2 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-xs text-blue-800 dark:text-blue-200">JavaScript</span>
+                            </div>
+                            <a href="rockPaperScissorGame/index.html" target="_blank"
+                                class="text-blue-600 dark:text-blue-400 hover:underline flex items-center">
+                                View Project <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 3rd project card ends -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white" data-aos="fade-up">
+                    Contact Me</h2>
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="md:flex">
+                        <div class="hidden md:block md:w-1/2 bg-gradient-to-br from-blue-500 to-purple-600 p-8">
+                            <h3 class="text-xl font-semibold text-white mb-4">Contact Information</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <i data-feather="mail" class="w-5 h-5 mr-3 text-white"></i>
+                                    <span class="text-white">tarikerenkurt@gmail.com</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i data-feather="phone" class="w-5 h-5 mr-3 text-white"></i>
+                                    <span class="text-white">+31 6 ** ** ** **</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i data-feather="map-pin" class="w-5 h-5 mr-3 text-white"></i>
+                                    <span class="text-white">Groningen, Netherlands</span>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <h3 class="text-xl font-semibold text-white mb-4">Follow Me</h3>
+                                <div class="flex space-x-4">
+                                    <a href="https://github.com/fulcrum0" target="_blank"
+                                        class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
+                                        <i data-feather="github" class="text-white"></i>
+                                    </a>
+                                    <a href="www.linkedin.com/in/tarikerenkurt" target="_blank"
+                                        class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
+                                        <i data-feather="linkedin" class="text-white"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/tarikerenkrt" target="_blank"
+                                        class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
+                                        <i data-feather="instagram" class="text-white"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 p-8">
+                            <form id="contactForm" class="space-y-6">
+                                <div>
+                                    <label for="name"
+                                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
+                                    <input type="text" id="name" name="name"
+                                        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white"
+                                        required>
+                                </div>
+                                <div>
+                                    <label for="email"
+                                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                                    <input type="email" id="email" name="email"
+                                        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white"
+                                        required>
+                                </div>
+                                <div>
+                                    <label for="subject"
+                                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
+                                    <input type="text" id="subject" name="subject"
+                                        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white"
+                                        required>
+                                </div>
+                                <div>
+                                    <label for="message"
+                                        class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
+                                    <textarea id="message" name="message" rows="4"
+                                        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white"
+                                        required></textarea>
+                                </div>
+                                <button type="submit"
+                                    class="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors flex items-center justify-center">
+                                    Send Message <i data-feather="send" class="w-4 h-4 ml-2"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 dark:bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-xl font-bold">Tarik Eren Kurt
+                        <p class="text-gray-400 mt-1">© 2025 All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/fulcrum0" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors">
+                        <i data-feather="github"></i>
+                    </a>
+                    <a href="www.linkedin.com/in/tarikerenkurt" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/tarikerenkrt" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors">
+                        <i data-feather="instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+    </script>
+</body>
+
+</html>
