@@ -301,7 +301,7 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
-                    <a href="#" class="text-xl font-bold">Tarik Eren Kurt
+                    <a href="#home" class="text-xl font-bold">Tarik Eren Kurt
                         <p class="text-gray-400 mt-1">© 2025 All rights reserved.</p>
                 </div>
                 <div class="flex space-x-6">
@@ -328,6 +328,29 @@
             once: true
         });
         feather.replace();
+
+        const themeBtn = document.getElementById("themeBtn");
+        const html = document.documentElement;
+
+        if (localStorage.getItem("theme") === "dark") {
+            html.classList.add("dark");
+        } else if (localStorage.getItem("theme") === "light") {
+            html.classList.remove("dark");
+        } else {
+            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                html.classList.add("dark");
+            }
+        }
+
+        themeBtn.addEventListener("click", () => {
+            html.classList.toggle("dark");
+            if (html.classList.contains("dark")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
+            }
+            feather.replace();
+        });
     </script>
 </body>
 
