@@ -355,9 +355,27 @@
 
         // Mobile Menu Toggle
         const mobileMenu = document.querySelector('.mobile-menu');
-        document.getElementById('mobileMenuBtn').addEventListener('click', () => mobileMenu.classList.remove('hidden'));
-        document.getElementById('closeMenuBtn').addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+
+        // Aç / kapa toggle
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Menüdeki linklere tıklanınca menüyü kapat
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
     </script>
+
 
 </body>
 
