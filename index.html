@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" class="light scroll-smooth">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarik Eren Kurt</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
 </head>
 
 <body>
-    <div class="theme-toggle fixed top-4 right-4 z-50">
-        <button id="themeBtn" class="p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg">
-            <i data-feather="moon" class="dark:hidden"></i>
-            <i data-feather="sun" class="hidden dark:block"></i>
-        </button>
-    </div>
-
     <nav class="fixed w-full z-40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <a href="#" class="text-xl font-bold text-gray-800 dark:text-white">Tarik Eren Kurt</a>
-                <div class="hidden md:flex space-x-8">
+                <div class="hidden md:flex space-x-4 items-center">
                     <a href="#home"
                         class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Home</a>
                     <a href="#about"
@@ -34,6 +31,14 @@
                         class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Projects</a>
                     <a href="#contact"
                         class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Contact</a>
+                    <a href="#" download id="cvBtn"
+                        class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        Download CV
+                    </a>
+                    <button id="themeBtn" class="p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg">
+                        <i data-feather="moon" class="dark:hidden"></i>
+                        <i data-feather="sun" class="hidden dark:block"></i>
+                    </button>
                 </div>
                 <button class="md:hidden focus:outline-none" id="mobileMenuBtn">
                     <i data-feather="menu" class="text-gray-800 dark:text-white"></i>
@@ -52,10 +57,19 @@
             <a href="#about" class="text-2xl font-medium text-gray-800 dark:text-white">About</a>
             <a href="#projects" class="text-2xl font-medium text-gray-800 dark:text-white">Projects</a>
             <a href="#contact" class="text-2xl font-medium text-gray-800 dark:text-white">Contact</a>
+            <a href="#" download id="cvBtnMobile"
+                class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                Download CV
+            </a>
+            <button id="themeBtnMobile" class="p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg">
+                <i data-feather="moon" class="dark:hidden"></i>
+                <i data-feather="sun" class="hidden dark:block"></i>
+            </button>
         </div>
     </div>
 
     <main>
+        <!-- Home Section -->
         <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
             <div
                 class="absolute inset-0 bg-gradient-to-br from-white via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 z-0">
@@ -86,6 +100,7 @@
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="about" class="py-20 bg-gray-50 dark:bg-gray-800">
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white" data-aos="fade-up">About
@@ -102,8 +117,8 @@
                     <div class="w-full md:w-2/3" data-aos="fade-left" data-aos-delay="100">
                         <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">Who I Am</h3>
                         <p class="text-gray-600 dark:text-gray-300 mb-6">
-                            I'm a passionate Software Developer student. I love
-                            developing game, learning new things about technology and games.
+                            I'm a passionate Software Developer student. I love developing games, learning new things
+                            about technology and games.
                         </p>
                         <div class="grid grid-cols-2 gap-4 mb-8">
                             <div class="flex items-center">
@@ -128,20 +143,21 @@
             </div>
         </section>
 
+        <!-- Projects Section -->
         <section id="projects" class="py-20 bg-white dark:bg-gray-900">
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white" data-aos="fade-up">My
                     Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- 1st project card starts -->
+                    <!-- Project cards burada -->
+                    <!-- 1st Project -->
                     <div class="project-card bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
                         data-aos="fade-up" data-aos-delay="100">
                         <div class="h-48 overflow-hidden">
                             <img src="img/calculator.png" alt="Project 1" class="w-full h-full object-cover">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Unit Converter
-                            </h3>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Unit Converter</h3>
                             <p class="text-gray-600 dark:text-gray-300 mb-4">My first ever project after starting to
                                 this school.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
@@ -158,16 +174,14 @@
                             </a>
                         </div>
                     </div>
-                    <!-- 1st project card ends -->
-                    <!-- 2nd project card starts -->
+                    <!-- 2nd Project -->
                     <div class="project-card bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
                         data-aos="fade-up" data-aos-delay="100">
                         <div class="h-48 overflow-hidden">
                             <img src="img/memory-game.png" alt="Project 2" class="w-full h-full object-cover">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Memory Game
-                            </h3>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Memory Game</h3>
                             <p class="text-gray-600 dark:text-gray-300 mb-4">First webgame ever made by me.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span
@@ -183,8 +197,7 @@
                             </a>
                         </div>
                     </div>
-                    <!-- 2nd project card ends -->
-                    <!-- 3rd project card starts -->
+                    <!-- 3rd Project -->
                     <div class="project-card bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
                         data-aos="fade-up" data-aos-delay="100">
                         <div class="h-48 overflow-hidden">
@@ -209,11 +222,11 @@
                             </a>
                         </div>
                     </div>
-                    <!-- 3rd project card ends -->
                 </div>
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
             <div class="max-w-4xl mx-auto px-4">
                 <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white" data-aos="fade-up">
@@ -227,10 +240,6 @@
                                 <div class="flex items-center">
                                     <i data-feather="mail" class="w-5 h-5 mr-3 text-white"></i>
                                     <span class="text-white">tarikerenkurt@gmail.com</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <i data-feather="phone" class="w-5 h-5 mr-3 text-white"></i>
-                                    <span class="text-white">+31 6 ** ** ** **</span>
                                 </div>
                                 <div class="flex items-center">
                                     <i data-feather="map-pin" class="w-5 h-5 mr-3 text-white"></i>
@@ -301,8 +310,9 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
-                    <a href="#home" class="text-xl font-bold">Tarik Eren Kurt
+                    <a href="#" class="text-xl font-bold">Tarik Eren Kurt
                         <p class="text-gray-400 mt-1">© 2025 All rights reserved.</p>
+                    </a>
                 </div>
                 <div class="flex space-x-6">
                     <a href="https://github.com/fulcrum0" target="_blank"
@@ -321,37 +331,34 @@
             </div>
         </div>
     </footer>
+
     <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
+        // AOS ve Feather
+        AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
         feather.replace();
 
-        const themeBtn = document.getElementById("themeBtn");
-        const html = document.documentElement;
+        // Tema Toggle
+        const themeBtns = [document.getElementById('themeBtn'), document.getElementById('themeBtnMobile')];
+        themeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.documentElement.classList.toggle('dark');
 
-        if (localStorage.getItem("theme") === "dark") {
-            html.classList.add("dark");
-        } else if (localStorage.getItem("theme") === "light") {
-            html.classList.remove("dark");
-        } else {
-            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-                html.classList.add("dark");
-            }
-        }
+                // İkonları toggle et
+                const moonIcon = btn.querySelector('[data-feather="moon"]');
+                const sunIcon = btn.querySelector('[data-feather="sun"]');
+                moonIcon.classList.toggle('hidden');
+                sunIcon.classList.toggle('hidden');
 
-        themeBtn.addEventListener("click", () => {
-            html.classList.toggle("dark");
-            if (html.classList.contains("dark")) {
-                localStorage.setItem("theme", "dark");
-            } else {
-                localStorage.setItem("theme", "light");
-            }
-            feather.replace();
+                feather.replace();
+            });
         });
+
+        // Mobile Menu Toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+        document.getElementById('closeMenuBtn').addEventListener('click', () => mobileMenu.classList.add('hidden'));
     </script>
+
 </body>
 
 </html>
